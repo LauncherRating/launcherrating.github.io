@@ -9,7 +9,7 @@
       {"name": "Скачать", "url": "https://example.com"}
     ],
     "images": [
-      "pack.png"
+      "images/pack.png"
     ]
   }
 ]
