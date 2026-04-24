@@ -4,9 +4,10 @@
     "order": 1,
     "logo": "images/Prism_Launcher_logo.png",
     "description": "Простой пример лаунчера",
-    "tags": ["Лицензионный", "Modrinth", "CurseForge"],
+    "tags": ["Открытый исходный код","Лицензионный", "Modrinth", "CurseForge"],
     "links": [
-      {"name": "Скачать", "url": "https://example.com"}
+      {"name": "Сайт проекта", "url": "https://prismlauncher.org/"},
+      {"name": "Github", "url":"https://github.com/PrismLauncher/PrismLauncher"}
     ],
     "images": [
       "images/pack.png"
