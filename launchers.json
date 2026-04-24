@@ -4,7 +4,7 @@
     "order": 1,
     "logo": "images/Prism_Launcher_logo.png",
     "description": "Простой пример лаунчера",
-    "tags": ["Открытый исходный код","Лицензионный", "Modrinth", "CurseForge"],
+    "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код"],
     "links": [
       {"name": "Сайт проекта", "url": "https://prismlauncher.org/"},
       {"name": "Github", "url":"https://github.com/PrismLauncher/PrismLauncher"}
@@ -14,11 +14,11 @@
     ]
   },
   {
-    "name": "Example Launcher2",
+    "name": "XMCL",
     "order": 2,
     "logo": "images/pack.png",
     "description": "Простой пример лаунчера",
-    "tags": ["быстрый", "моды", "пират"],
+    "tags": ["Пиратский", "моды", "пират"],
     "links": [
       {"name": "Скачать", "url": "https://example.com"}
     ],
