@@ -8,20 +8,8 @@
     "links": [
       {"name": "Скачать", "url": "https://example.com"}
     ],
-    "images": ["example-logo.png"
-    ]
-  },
-  {
-    "name": "Another Launcher",
-    "order": 2,
-    "logo": "images/another-logo.png",
-    "description": "Еще один пример",
-    "tags": ["ванилла", "легкий"],
-    "links": [
-      {"name": "Сайт", "url": "https://another.com"}
-    ],
     "images": [
-      "images/another1.png"
+      "pack.png"
     ]
   }
 ]
