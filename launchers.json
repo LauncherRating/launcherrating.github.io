@@ -8,7 +8,7 @@
     "links": [
       {"name": "Скачать", "url": "https://example.com"}
     ],
-    "images": [
+    "images": ["example-logo.png"
     ]
   },
   {
