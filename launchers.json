@@ -11,5 +11,18 @@
     "images": [
       "images/pack.png"
     ]
+  },
+  {
+    "name": "Example Launcher2",
+    "order": 2,
+    "logo": "images/pack.png",
+    "description": "Простой пример лаунчера",
+    "tags": ["быстрый", "моды", "пират"],
+    "links": [
+      {"name": "Скачать", "url": "https://example.com"}
+    ],
+    "images": [
+      "images/pack.png"
+    ]
   }
 ]
