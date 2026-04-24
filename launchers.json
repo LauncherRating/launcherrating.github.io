@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Example Launcher",
+    "order": 1,
+    "logo": "images/example-logo.png",
+    "description": "Простой пример лаунчера",
+    "tags": ["быстрый", "моды", "популярный"],
+    "links": [
+      {"name": "Скачать", "url": "https://example.com"}
+    ],
+    "images": [
+      "images/example1.png",
+      "images/example2.png"
+    ]
+  },
+  {
+    "name": "Another Launcher",
+    "order": 2,
+    "logo": "images/another-logo.png",
+    "description": "Еще один пример",
+    "tags": ["ванилла", "легкий"],
+    "links": [
+      {"name": "Сайт", "url": "https://another.com"}
+    ],
+    "images": [
+      "images/another1.png"
+    ]
+  }
+]
