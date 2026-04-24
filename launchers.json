@@ -10,7 +10,8 @@
       {"name": "Github", "url":"https://github.com/PrismLauncher/PrismLauncher"}
     ],
     "images": [
-      "images/prism_window.png"
+      "images/prism_window.png",
+      "images/prism_window.png2.png"
     ]
   },
   {
@@ -24,7 +25,8 @@
       {"name": "Github", "url":"https://github.com/voxelum/x-minecraft-launcher"}
     ],
     "images": [
-      "images/pack.png"
+      "images/xmcl1.png",
+      "images/xmcl2.png"
     ]
   }
 ]
