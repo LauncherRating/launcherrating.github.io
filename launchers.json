@@ -14,13 +14,14 @@
     ]
   },
   {
-    "name": "XMCL",
+    "name": "X Minecraft Launcher (XMCL)",
     "order": 2,
     "logo": "images/pack.png",
     "description": "Простой пример лаунчера",
-    "tags": ["Пиратский", "моды", "пират"],
+    "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код"],
     "links": [
-      {"name": "Скачать", "url": "https://example.com"}
+      {"name": "Сайт проекта", "url": "https://xmcl.app/"},
+      {"name": "Github", "url":"https://github.com/voxelum/x-minecraft-launcher"}
     ],
     "images": [
       "images/pack.png"
