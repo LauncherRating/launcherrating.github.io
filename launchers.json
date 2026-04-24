@@ -10,13 +10,13 @@
       {"name": "Github", "url":"https://github.com/PrismLauncher/PrismLauncher"}
     ],
     "images": [
-      "images/pack.png"
+      "images/prism_window.png"
     ]
   },
   {
     "name": "X Minecraft Launcher (XMCL)",
     "order": 2,
-    "logo": "images/pack.png",
+    "logo": "images/xmcl_logo.png",
     "description": "Простой пример лаунчера",
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код"],
     "links": [
