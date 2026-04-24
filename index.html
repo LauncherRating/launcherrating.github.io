@@ -74,8 +74,33 @@ function render() {
   const grid = document.getElementById('grid');
   grid.innerHTML = '';
 
-  filtered.forEach(l => {
+filtered.forEach(l => {
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
+      <img src="${l.logo}" alt="${l.name}">
+      <div>${l.name}</div>
+    `;
+    card.onclick = ()=>showDetails(l);
+    grid.appendChild(card);
+  });
+}
+
+function showDetails(l) {
+  const d = document.getElementById('details');
+  d.innerHTML = `
+    <h2>${l.name}</h2>
+    <p>${l.description}</p>
+    <div>${l.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+    <h4>Ссылки</h4>
+    ${l.links.map(link=>`<div><a href="${link.url}" target="_blank">${link.name}</a></div>`).join('')}
+    <h4>Фото</h4>
+    ${l.images.map(img=>`<img src="${img}" style="width:100%; margin-bottom:5px;">`).join('')}
+  `;
+}
+
+document.getElementById('search').oninput = render;
+</script>
+
+</body>
 </html>
