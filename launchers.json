@@ -81,8 +81,8 @@
     "name": "ATLauncher",
     "order": 6,
     "logo": "images/atl.png",
-    "description": "Лаунчер от разработчиков Axiom и Flashback модов",
-    "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
+    "description": "",
+    "tags": ["Лицензионный", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Сайт проекта", "url": "https://atlauncher.com/"},
       {"name": "Github", "url":"https://github.com/ATLauncher/ATLauncher"}
