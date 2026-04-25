@@ -215,7 +215,8 @@ function render() {
 
   const filtered = data.filter(l => {
     const matchSearch = l.name.toLowerCase().includes(search);
-    const matchTags = activeTags.size === 0 || l.tags.some(t => activeTags.has(t));
+    // Логика фильтров: теперь ВСЕ выбранные теги должны присутствовать (AND)
+    const matchTags = activeTags.size === 0 || [...activeTags].every(tag => l.tags.includes(tag));
     return matchSearch && matchTags;
   });
 
