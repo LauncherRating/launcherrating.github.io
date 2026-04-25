@@ -84,8 +84,8 @@
     "description": "Лаунчер от разработчиков Axiom и Flashback модов",
     "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
     "links": [
-      {"name": "Сайт проекта", "url": "https://pandora.moulberry.com/"},
-      {"name": "Github", "url":"https://github.com/Moulberry/PandoraLauncher"}
+      {"name": "Сайт проекта", "url": "https://atlauncher.com/"},
+      {"name": "Github", "url":"https://github.com/ATLauncher/ATLauncher"}
     ],
     "images": [
       "images/atl1.png",
