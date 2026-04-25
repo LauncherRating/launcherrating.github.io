@@ -4,7 +4,7 @@
     "order": 1,
     "logo": "images/Prism_Launcher_logo.png",
     "description": "Форк PolyMC",
-    "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код"],
+    "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Сайт проекта", "url": "https://prismlauncher.org/"},
       {"name": "Github", "url":"https://github.com/PrismLauncher/PrismLauncher"}
@@ -19,7 +19,7 @@
     "order": 2,
     "logo": "images/xmcl_logo.png",
     "description": "Простой пример лаунчера",
-    "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код"],
+    "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Сайт проекта", "url": "https://xmcl.app/"},
       {"name": "Github", "url":"https://github.com/voxelum/x-minecraft-launcher"}
@@ -34,7 +34,7 @@
     "order": 3,
     "logo": "images/fluent_logo.png",
     "description": "Простой пример лаунчера",
-    "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код"],
+    "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Сайт проекта", "url": "https://xcubestudio.net/fluent-launcher"},
       {"name": "Microsoft Store", "url":"https://apps.microsoft.com/detail/9p4nqqxq942p?hl=ru-ru"},
