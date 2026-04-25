@@ -37,7 +37,7 @@
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код"],
     "links": [
       {"name": "Сайт проекта", "url": "https://xcubestudio.net/fluent-launcher"},
-      {"name": "Microsoft Store", "url":"https://apps.microsoft.com/detail/9p4nqqxq942p?hl=ru-ru&gl=AG"}
+      {"name": "Microsoft Store", "url":"https://apps.microsoft.com/detail/9p4nqqxq942p?hl=ru-ru"}
       {"name": "Github", "url":"https://github.com/Xcube-Studio/Natsurainko.FluentLauncher"}
     ],
     "images": [
