@@ -3,7 +3,7 @@
     "name": "Prism Launcher",
     "order": 1,
     "logo": "images/Prism_Launcher_logo.png",
-    "description": "Простой пример лаунчера",
+    "description": "Форк PolyMC",
     "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код"],
     "links": [
       {"name": "Сайт проекта", "url": "https://prismlauncher.org/"},
@@ -27,6 +27,23 @@
     "images": [
       "images/xmcl1.png",
       "images/xmcl2.png"
+    ]
+  },
+  {
+    "name": "Fluent Launcher",
+    "order": 3,
+    "logo": "images/fluent_logo.png",
+    "description": "Простой пример лаунчера",
+    "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://xcubestudio.net/fluent-launcher"},
+      {"name": "Microsoft Store", "url":"https://apps.microsoft.com/detail/9p4nqqxq942p?hl=ru-ru&gl=AG"}
+      {"name": "Github", "url":"https://github.com/Xcube-Studio/Natsurainko.FluentLauncher"}
+    ],
+    "images": [
+      "images/fluent1.png",
+      "images/fluent2.png",
+      "images/fluent3.png",
     ]
   }
 ]
