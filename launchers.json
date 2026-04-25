@@ -45,5 +45,33 @@
       "images/fluent2.png",
       "images/fluent3.png"
     ]
-  }
+  },
+  {
+    "name": "Modrinth App",
+    "order": 4,
+    "logo": "images/ModrinthApp.png",
+    "description": "Лаунчер от Modrinth, сайта для модов, сборок, ресурспаков и т.д.",
+    "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://modrinth.com/app"},
+      {"name": "Github", "url":"https://github.com/modrinth/code"}
+    ],
+    "images": [
+      "images/modrinth1.png",
+      "images/modrinth2.png"
+    ]
+  },
+  {
+    "name": "Pandora Launcher",
+    "order": 4,
+    "logo": "images/PandoraLauncher.png",
+    "description": "Лаунчер от разработчиков Axiom и Flashback модов",
+    "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://pandora.moulberry.com/"},
+      {"name": "Github", "url":"https://github.com/Moulberry/PandoraLauncher"}
+    ],
+    "images": [
+      "images/modrinth1.png",
+      "images/modrinth2.png"
 ]
