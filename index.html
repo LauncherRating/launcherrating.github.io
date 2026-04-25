@@ -45,10 +45,7 @@
       background:transparent;
     }
 
-    .filter-btn:hover {
-      background:#1c212b;
-    }
-
+    .filter-btn:hover { background:#1c212b; }
     .filter-btn.active {
       background:#2a2f3a;
       border-color:#3a4150;
@@ -58,11 +55,13 @@
       flex:1;
       display:flex;
       flex-direction:column;
+      min-width:0;
     }
 
     .search {
       padding:15px;
       border-bottom:1px solid #222;
+      flex-shrink:0;
     }
 
     input {
@@ -111,12 +110,22 @@
       width:320px;
       min-width:250px;
       max-width:600px;
-      resize:horizontal;
-      overflow:auto;
       background:#151922cc;
       backdrop-filter: blur(6px);
       border-left:1px solid #222;
       padding:15px;
+      overflow-y:auto;
+      position:relative;
+    }
+
+    /* ручка для ресайза слева */
+    .resizer {
+      position:absolute;
+      left:0;
+      top:0;
+      width:5px;
+      height:100%;
+      cursor:ew-resize;
     }
 
     .tag {
@@ -146,16 +155,17 @@
 </div>
 
 <div class="details" id="details">
+  <div class="resizer" id="resizer"></div>
   <h3>Выберите лаунчер</h3>
 </div>
 
 <script>
 particlesJS("particles-js", {
   particles: {
-    number: { value: 120 },
+    number: { value: 160 },
     color: { value: "#666" },
     size: { value: 2 },
-    move: { speed: 0.6 }
+    move: { speed: 1.2 }
   }
 });
 
@@ -168,6 +178,9 @@ fetch('launchers.json')
     data = json.sort((a,b)=>a.order-b.order);
     renderFilters();
     render();
+  })
+  .catch(e => {
+    document.body.innerHTML = '<pre style="color:red">Ошибка JSON:\n'+e+'</pre>';
   });
 
 function renderFilters() {
@@ -226,7 +239,7 @@ function render() {
 
 function showDetails(l) {
   const d = document.getElementById('details');
-  d.innerHTML = `
+  d.innerHTML = `<div class="resizer" id="resizer"></div>
     <h2>${l.name}</h2>
     <p>${l.description}</p>
     <div>${l.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
@@ -235,7 +248,32 @@ function showDetails(l) {
     <h4>Фото</h4>
     ${l.images.map(img=>`<img src="${img}" style="width:100%; margin-bottom:8px; border-radius:8px;">`).join('')}
   `;
+  initResizer();
 }
+
+function initResizer() {
+  const resizer = document.getElementById('resizer');
+  const panel = document.getElementById('details');
+
+  let startX, startWidth;
+
+  resizer.onmousedown = (e) => {
+    startX = e.clientX;
+    startWidth = panel.offsetWidth;
+
+    document.onmousemove = (e) => {
+      const dx = startX - e.clientX;
+      panel.style.width = (startWidth + dx) + 'px';
+    };
+
+    document.onmouseup = () => {
+      document.onmousemove = null;
+      document.onmouseup = null;
+    };
+  };
+}
+
+initResizer();
 
 document.getElementById('search').oninput = render;
 </script>
