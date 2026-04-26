@@ -80,7 +80,7 @@
   {
     "name": "PineconeMC (ElyPrismLauncher)",
     "order": 5,
-    "logo": "images/PandoraLauncher.png",
+    "logo": "images/elyprism.png",
     "description": "Форк Prism с поддержкой Ely.by",
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
     "links": [
@@ -88,9 +88,7 @@
       {"name": "Github", "url":"https://github.com/ElyPrismLauncher/ElyPrismLauncher"}
     ],
     "images": [
-      "images/pandor1.png",
-      "images/pandor2.png",
-      "images/pand.png"
+      "images/screenshot.png"
     ]
   },
   {
