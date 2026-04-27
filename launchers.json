@@ -81,7 +81,7 @@
     "name": "Freesm Launcher",
     "order": 6,
     "logo": "images/freesm.png",
-    "description": "Форк Prism с поддержкой Ely.by",
+    "description": "Форк Prism с поддержкой Ely.by и других систем, улучшенным интерфейсом и другими фишками",
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Сайт проекта", "url": "https://freesmlauncher.org/"},
