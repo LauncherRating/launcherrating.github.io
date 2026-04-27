@@ -106,8 +106,22 @@
     ]
   },
   {
-    "name": "ATLauncher",
+    "name": "Prism Launcher (Cracked)",
     "order": 8,
+    "logo": "images/prismcr.png",
+    "description": "Форк Prism, добавляющий возможность играть без лицензии",
+    "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Github", "url":"https://github.com/Diegiwg/PrismLauncher-Cracked"}
+    ],
+    "images": [
+      "images/prism_window.png",
+      "images/prism_window.png2.png"
+    ]
+  },
+  {
+    "name": "ATLauncher",
+    "order": 9,
     "logo": "images/atl.png",
     "description": "",
     "tags": ["Лицензионный", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
