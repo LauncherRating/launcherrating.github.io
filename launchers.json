@@ -149,8 +149,24 @@
     ]
   },
   {
-    "name": "Legacy Launcher",
+    "name": "Hello Minecraft! Launcher (HMCL)",
     "order": 11,
+    "logo": "images/hmcl.png",
+    "description": "",
+    "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://hmcl.huangyuhui.net/"},
+      {"name": "Github", "url":"https://github.com/HMCL-dev/HMCL"}
+    ],
+    "images": [
+      "images/hmcl1.png",
+      "images/hmcl2.png",
+      "images/hmcl3.png"
+    ]
+  },
+  {
+    "name": "Legacy Launcher (TL Legacy, TLauncer)",
+    "order": 12,
     "logo": "images/legacy.png",
     "description": "Оригинальный тлаунчер, сменил имя после кражи",
     "tags": ["Пиратский", "Открытый исходный код", "Хорошая репутация"],
