@@ -133,5 +133,20 @@
       "images/atl1.png",
       "images/atl2.png"
     ]
+  },
+  {
+    "name": "Legacy Launcher",
+    "order": 10,
+    "logo": "images/legacy.png",
+    "description": "Оригинальный тлаунчер, сменил имя после кражи",
+    "tags": ["Пиратский", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://llaun.ch/"},
+      {"name": "Github", "url":"https://github.com/LegacyLauncher/archive"}
+    ],
+    "images": [
+      "images/leg1.png",
+      "images/leg2.png"
+    ]
   }
 ]
