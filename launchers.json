@@ -149,8 +149,23 @@
     ]
   },
   {
-    "name": "Hello Minecraft! Launcher (HMCL)",
+    "name": "PolyMC",
     "order": 11,
+    "logo": "images/poly.png",
+    "description": "Форк MultiMC",
+    "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://polymc.org/"},
+      {"name": "Github", "url":"https://github.com/PolyMC/PolyMC"}
+    ],
+    "images": [
+      "images/poly1.png",
+      "images/poly2.png"
+    ]
+  },
+  {
+    "name": "Hello Minecraft! Launcher (HMCL)",
+    "order": 12,
     "logo": "images/hmcl.png",
     "description": "",
     "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -166,7 +181,7 @@
   },
   {
     "name": "Legacy Launcher (TL Legacy, TLauncer)",
-    "order": 12,
+    "order": 13,
     "logo": "images/legacy.png",
     "description": "Оригинальный тлаунчер, сменил имя после кражи",
     "tags": ["Пиратский", "Открытый исходный код", "Хорошая репутация"],
