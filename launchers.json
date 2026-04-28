@@ -135,8 +135,22 @@
     ]
   },
   {
-    "name": "Legacy Launcher",
+    "name": "Lexplosion",
     "order": 10,
+    "logo": "images/lex.png",
+    "description": "",
+    "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://night-world.org/"},
+      {"name": "Github", "url":"https://github.com/NightWorldTeam/Lexplosion"}
+    ],
+    "images": [
+      "images/lex1.png"
+    ]
+  },
+  {
+    "name": "Legacy Launcher",
+    "order": 11,
     "logo": "images/legacy.png",
     "description": "Оригинальный тлаунчер, сменил имя после кражи",
     "tags": ["Пиратский", "Открытый исходный код", "Хорошая репутация"],
