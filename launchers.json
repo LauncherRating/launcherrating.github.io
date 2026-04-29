@@ -178,8 +178,23 @@
     ]
   },
   {
-    "name": "Hello Minecraft! Launcher (HMCL)",
+    "name": "UltimMC",
     "order": 13,
+    "logo": "images/ultim.png",
+    "description": "Пиратский форк MultiMC",
+    "tags": ["Пиратский", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://ultimmc.com/"},
+      {"name": "Github", "url":"https://github.com/UltimMC/Launcher"}
+    ],
+    "images": [
+      "images/ultim2.png",
+      "images/ultim1.png"
+    ]
+  },
+  {
+    "name": "Hello Minecraft! Launcher (HMCL)",
+    "order": 14,
     "logo": "images/hmcl.png",
     "description": "",
     "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -195,7 +210,7 @@
   },
   {
     "name": "Legacy Launcher (TL Legacy, TLauncer)",
-    "order": 14,
+    "order": 15,
     "logo": "images/legacy.png",
     "description": "Оригинальный тлаунчер, сменил имя после кражи",
     "tags": ["Пиратский", "Открытый исходный код", "Хорошая репутация"],
