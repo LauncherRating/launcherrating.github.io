@@ -16,50 +16,50 @@
       overflow:hidden;
     }
 
-    /* Halo background (improved) */
+    /* ===== HALO BACKGROUND ===== */
     .halo {
       position:fixed;
-      width:600px;
-      height:600px;
+      width:700px;
+      height:700px;
       border-radius:50%;
       z-index:-1;
-      opacity:0.8;
-      background: radial-gradient(circle at center, rgba(255,170,120,0.9) 0%, rgba(255,120,80,0.6) 40%, rgba(255,90,60,0.4) 70%, transparent 85%);
-      animation: float 30s ease-in-out infinite alternate, morph 12s ease-in-out infinite;
-      will-change: transform;
+      filter: blur(40px);
+      opacity:0.55;
+      mix-blend-mode: screen;
+      animation: move 18s ease-in-out infinite;
     }
 
-    .halo1 { top:15%; left:25%; }
-    .halo2 { top:55%; left:65%; animation-delay: 3s; }
-    .halo3 { top:45%; left:10%; animation-delay: 6s; }
-
-    /* плавное движение */
-    @keyframes float {
-      0% { transform: translate3d(0,0,0); }
-      50% { transform: translate3d(30px,-30px,0); }
-      100% { transform: translate3d(0,0,0); }
+    .halo1 {
+      top:10%; left:15%;
+      background: radial-gradient(circle, rgba(255,120,90,0.9), transparent 60%);
     }
 
-    /* мягкая деформация круга */
-    @keyframes morph {
-      0%,100% { border-radius: 50% 50% 50% 50%; }
-      25% { border-radius: 55% 45% 50% 50%; }
-      50% { border-radius: 50% 60% 40% 50%; }
-      75% { border-radius: 45% 55% 55% 45%; }
-    }
-      50% { transform: translate(20px, -20px); }
-      100% { transform: translate(0,0); }
-    }
-      50% { transform: translate(50px, -50px); }
-      100% { transform: translate(0,0); }
+    .halo2 {
+      top:50%; left:60%;
+      background: radial-gradient(circle, rgba(120,160,255,0.8), transparent 60%);
+      animation-delay: -6s;
     }
 
+    .halo3 {
+      top:70%; left:20%;
+      background: radial-gradient(circle, rgba(180,90,255,0.7), transparent 60%);
+      animation-delay: -12s;
+    }
+
+    @keyframes move {
+      0%   { transform: translate(0,0) scale(1); }
+      50%  { transform: translate(60px,-40px) scale(1.1); }
+      100% { transform: translate(0,0) scale(1); }
+    }
+
+    /* ===== SCROLLBAR ===== */
     *::-webkit-scrollbar { width:8px; }
     *::-webkit-scrollbar-thumb { background:#2a2f3a; border-radius:10px; }
 
+    /* ===== SIDEBAR ===== */
     .sidebar {
       width:240px;
-      background:#15192288;
+      background:#15192280;
       backdrop-filter: blur(4px);
       padding:15px;
       overflow-y:auto;
@@ -79,6 +79,7 @@
     .filter-btn:hover { background:#1c212b; }
     .filter-btn.active { background:#2a2f3a; }
 
+    /* ===== CENTER ===== */
     .content {
       flex:1;
       display:flex;
@@ -116,7 +117,7 @@
       display:flex;
       align-items:center;
       gap:15px;
-      background:#15192288;
+      background:#15192270;
       border-radius:12px;
       padding:10px 15px;
       cursor:pointer;
@@ -125,13 +126,18 @@
 
     .card:hover { background:#1c212b; }
 
-    .card img { width:50px; height:50px; object-fit:contain; }
+    .card img {
+      width:50px;
+      height:50px;
+      object-fit:contain;
+    }
 
+    /* ===== DETAILS ===== */
     .details {
       width:320px;
       min-width:250px;
       max-width:600px;
-      background:#15192288;
+      background:#15192270;
       backdrop-filter: blur(4px);
       border-left:1px solid #222;
       padding:15px;
@@ -157,31 +163,32 @@
       font-size:12px;
     }
 
+    /* ===== IMAGE PREVIEW ===== */
     .preview-overlay {
       position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:rgba(0,0,0,0.9);
+      top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.92);
       display:flex;
       align-items:center;
       justify-content:center;
       z-index:999;
-      cursor:zoom-out;
+      cursor:pointer;
     }
 
     .preview-overlay img {
-      max-width:90%;
-      max-height:90%;
+      max-width:92%;
+      max-height:92%;
       border-radius:10px;
     }
 
     a { color:#7aa2ff; text-decoration:none; }
+    a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
 
+<!-- HALO BACKGROUND -->
 <div class="halo halo1"></div>
 <div class="halo halo2"></div>
 <div class="halo halo3"></div>
@@ -205,122 +212,114 @@ let data = [];
 let activeTags = new Set();
 
 fetch('launchers.json')
-  .then(res => res.json())
+  .then(r => r.json())
   .then(json => {
     data = json.sort((a,b)=>a.order-b.order);
     renderFilters();
     render();
-  })
-  .catch(e => {
-    document.body.innerHTML = '<pre style="color:red">Ошибка JSON:\n'+e+'</pre>';
   });
 
 function renderFilters() {
   const allTags = new Set();
   data.forEach(l => l.tags.forEach(t => allTags.add(t)));
 
-  const container = document.getElementById('filters');
-  container.innerHTML = '<h3>Фильтры</h3>';
+  const c = document.getElementById('filters');
+  c.innerHTML = '<h3>Фильтры</h3>';
 
   allTags.forEach(tag => {
-    const btn = document.createElement('div');
-    btn.className = 'filter-btn';
-    btn.textContent = tag;
+    const b = document.createElement('div');
+    b.className = 'filter-btn';
+    b.textContent = tag;
 
-    btn.onclick = () => {
+    b.onclick = () => {
       if (activeTags.has(tag)) {
         activeTags.delete(tag);
-        btn.classList.remove('active');
+        b.classList.remove('active');
       } else {
         activeTags.add(tag);
-        btn.classList.add('active');
+        b.classList.add('active');
       }
       render();
     };
 
-    container.appendChild(btn);
+    c.appendChild(b);
   });
 }
 
 function render() {
-  const search = document.getElementById('search').value.toLowerCase();
+  const s = document.getElementById('search').value.toLowerCase();
 
   const filtered = data.filter(l => {
-    const matchSearch = l.name.toLowerCase().includes(search);
-    const matchTags = activeTags.size === 0 || [...activeTags].every(tag => l.tags.includes(tag));
-    return matchSearch && matchTags;
+    const okSearch = l.name.toLowerCase().includes(s);
+    const okTags = activeTags.size === 0 || [...activeTags].every(t => l.tags.includes(t));
+    return okSearch && okTags;
   });
 
-  const grid = document.getElementById('grid');
-  grid.innerHTML = '';
+  const g = document.getElementById('grid');
+  g.innerHTML = '';
 
   filtered.forEach(l => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = `
       <img src="${l.logo}">
       <div>
         <div style="font-weight:600">${l.name}</div>
-        <div style="font-size:12px; opacity:0.6">${l.tags.join(', ')}</div>
+        <div style="font-size:12px;opacity:0.6">${l.tags.join(', ')}</div>
       </div>
     `;
-    card.onclick = ()=>showDetails(l);
-    grid.appendChild(card);
+    el.onclick = () => show(l);
+    g.appendChild(el);
   });
 }
 
-function showDetails(l) {
+function show(l) {
   const d = document.getElementById('details');
   d.innerHTML = `<div class="resizer" id="resizer"></div>
     <h2>${l.name}</h2>
     <p>${l.description}</p>
     <div>${l.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
     <h4>Ссылки</h4>
-    ${l.links.map(link=>`<div><a href="${link.url}" target="_blank">${link.name}</a></div>`).join('')}
+    ${l.links.map(x=>`<div><a href="${x.url}" target="_blank">${x.name}</a></div>`).join('')}
     <h4>Фото</h4>
-    ${l.images.map(img=>`<img src="${img}" class="previewable" style="width:100%; margin-bottom:8px; border-radius:8px; cursor:zoom-in;">`).join('')}
+    ${l.images.map(img=>`<img src="${img}" class="preview" style="width:100%;margin-bottom:8px;border-radius:8px;cursor:pointer;">`).join('')}
   `;
 
-  initResizer();
+  initResize();
   initPreview();
 }
 
 function initPreview() {
-  document.querySelectorAll('.previewable').forEach(img => {
+  document.querySelectorAll('.preview').forEach(img => {
     img.onclick = () => {
-      const overlay = document.createElement('div');
-      overlay.className = 'preview-overlay';
-      overlay.innerHTML = `<img src="${img.src}">`;
-      overlay.onclick = () => overlay.remove();
-      document.body.appendChild(overlay);
+      const o = document.createElement('div');
+      o.className = 'preview-overlay';
+      o.innerHTML = `<img src="${img.src}">`;
+      o.onclick = () => o.remove();
+      document.body.appendChild(o);
     };
   });
 }
 
-function initResizer() {
-  const resizer = document.getElementById('resizer');
-  const panel = document.getElementById('details');
+function initResize() {
+  const r = document.getElementById('resizer');
+  const p = document.getElementById('details');
 
-  let startX, startWidth;
+  let x,w;
 
-  resizer.onmousedown = (e) => {
-    startX = e.clientX;
-    startWidth = panel.offsetWidth;
+  r.onmousedown = e => {
+    x = e.clientX;
+    w = p.offsetWidth;
 
-    document.onmousemove = (e) => {
-      const dx = startX - e.clientX;
-      panel.style.width = (startWidth + dx) + 'px';
+    document.onmousemove = e => {
+      p.style.width = (w + (x - e.clientX)) + 'px';
     };
 
-    document.onmouseup = () => {
-      document.onmousemove = null;
-      document.onmouseup = null;
-    };
+    document.onmouseup = () => document.onmousemove = null;
   };
 }
 
-initResizer();
-
+initResize();
 document.getElementById('search').oninput = render;
 </script>
 
