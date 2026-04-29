@@ -65,8 +65,8 @@
     "name": "AstralRinth",
     "order": 5,
     "logo": "images/astral.png",
-    "description": "Лаунчер от Modrinth, сайта для модов, сборок, ресурспаков и т.д.",
-    "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
+    "description": "Пиратский форк Modrinth App",
+    "tags": ["Пиратский", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Телеграм", "url": "http://astraliumdev.t.me/"},
       {"name": "Source", "url":"https://git.astralium.su/didirus/AstralRinth"}
