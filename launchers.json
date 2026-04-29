@@ -68,8 +68,8 @@
     "description": "Лаунчер от Modrinth, сайта для модов, сборок, ресурспаков и т.д.",
     "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
     "links": [
-      {"name": "Сайт проекта", "url": "https://modrinth.com/app"},
-      {"name": "Github", "url":"https://github.com/modrinth/code"}
+      {"name": "Телеграм", "url": "http://astraliumdev.t.me/"},
+      {"name": "Source", "url":"https://git.astralium.su/didirus/AstralRinth"}
     ],
     "images": [
       "images/astral1.png",
