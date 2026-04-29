@@ -80,7 +80,7 @@
   {
     "name": "Pandora Launcher",
     "order": 6,
-    "logo": "images/PandoraLauncher.png",
+    "logo": "images/pandora.png",
     "description": "Лаунчер от разработчиков Axiom и Flashback модов",
     "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
     "links": [
