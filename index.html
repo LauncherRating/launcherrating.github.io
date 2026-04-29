@@ -16,7 +16,7 @@
       display:flex;
     }
 
-    /* ===== BACKGROUND HALO (Modrinth-like ring) ===== */
+    /* ===== HALO ===== */
     .bg-ring{
       position:fixed;
       inset:0;
@@ -27,73 +27,63 @@
     }
 
     .ring{
-      width:850px;
-      height:850px;
+      width:900px;
+      height:900px;
       border-radius:50%;
-      position:relative;
 
-      /* neon ring look */
       background:
         conic-gradient(
           from 0deg,
-          rgba(120,200,255,0.0) 0deg,
-          rgba(120,200,255,0.35) 60deg,
-          rgba(180,120,255,0.30) 120deg,
-          rgba(120,255,200,0.25) 200deg,
-          rgba(255,120,180,0.25) 280deg,
-          rgba(120,200,255,0.0) 360deg
+          rgba(120,200,255,0) 0deg,
+          rgba(120,200,255,0.4) 60deg,
+          rgba(180,120,255,0.35) 120deg,
+          rgba(120,255,200,0.3) 200deg,
+          rgba(255,120,180,0.3) 280deg,
+          rgba(120,200,255,0) 360deg
         );
 
-      /* create hole in center */
-      -webkit-mask: radial-gradient(circle,
-        transparent 0 38%,
-        black 40% 55%,
-        transparent 58% 100%);
+      -webkit-mask: radial-gradient(circle, transparent 0 36%, black 38% 58%, transparent 60%);
+      mask: radial-gradient(circle, transparent 0 36%, black 38% 58%, transparent 60%);
 
-      mask: radial-gradient(circle,
-        transparent 0 38%,
-        black 40% 55%,
-        transparent 58% 100%);
+      filter: blur(28px);
+      opacity:0.6;
 
-      filter: blur(25px);
-      opacity:0.55;
-      animation: pulse 12s ease-in-out infinite;
+      animation: pulse 10s ease-in-out infinite;
     }
 
     @keyframes pulse{
-      0%,100%{ transform:scale(1) rotate(0deg); }
-      50%{ transform:scale(1.06) rotate(12deg); }
+      0%   { transform:scale(1) rotate(0deg) skew(0deg); }
+      50%  { transform:scale(1.08) rotate(15deg) skew(4deg); }
+      100% { transform:scale(1) rotate(0deg) skew(0deg); }
     }
 
-    /* ===== LEFT SIDEBAR ===== */
+    /* ===== SIDEBAR ===== */
     .sidebar{
-      width:70px;
+      width:140px;
       background:#11141bcc;
       backdrop-filter: blur(8px);
       border-right:1px solid #222;
       display:flex;
       flex-direction:column;
-      align-items:center;
-      padding:10px 0;
-      gap:10px;
+      padding:10px;
+      gap:8px;
+      overflow:auto;
     }
 
-    .icon{
-      width:42px;
-      height:42px;
-      border-radius:10px;
+    .filter-btn{
+      padding:6px 8px;
+      border-radius:8px;
       background:#1a1f2a;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      cursor:pointer;
-      transition:0.2s;
       border:1px solid transparent;
+      cursor:pointer;
       font-size:12px;
+      text-align:center;
     }
 
-    .icon:hover{ background:#232a3a; }
-    .icon.active{ background:#20283a; border-color:#3a4a66; }
+    .filter-btn.active{
+      background:#20283a;
+      border-color:#3a4a66;
+    }
 
     /* ===== MAIN ===== */
     .main{
@@ -107,14 +97,13 @@
       height:60px;
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      padding:0 20px;
+      justify-content:center; /* центр */
       border-bottom:1px solid #222;
       background:#0f1218cc;
       backdrop-filter: blur(8px);
     }
 
-    .search{ width:300px; }
+    .search{ width:320px; }
 
     input{
       width:100%;
@@ -123,7 +112,6 @@
       border-radius:8px;
       background:#1a1f2a;
       color:#fff;
-      outline:none;
     }
 
     /* ===== GRID ===== */
@@ -131,12 +119,14 @@
       flex:1;
       padding:20px;
       overflow:auto;
-      display:grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      display:flex;
+      flex-wrap:wrap;
       gap:12px;
+      align-content:flex-start;
     }
 
     .card{
+      width:220px; /* фиксированный размер */
       background:#141925cc;
       border:1px solid #1f2633;
       border-radius:14px;
@@ -168,15 +158,19 @@
       display:none;
       align-items:center;
       justify-content:center;
+      overflow:auto; /* скролл */
+      padding:20px;
     }
 
     .modal-content{
       width:600px;
-      max-width:90%;
+      max-width:100%;
       background:#141925;
       border:1px solid #2a3446;
       border-radius:12px;
       padding:20px;
+      max-height:90vh;
+      overflow:auto;
     }
 
     .modal img{
@@ -193,20 +187,23 @@
       border-radius:6px;
       font-size:12px;
     }
+
+    .links a{
+      display:block;
+      margin:4px 0;
+      color:#7aa2ff;
+    }
+
   </style>
 </head>
 <body>
 
-<!-- MODRINTH-LIKE HALO -->
-<div class="bg-ring">
-  <div class="ring"></div>
-</div>
+<div class="bg-ring"><div class="ring"></div></div>
 
 <div class="sidebar" id="filters"></div>
 
 <div class="main">
   <div class="topbar">
-    <div>Launchers</div>
     <div class="search"><input id="search" placeholder="Поиск..."></div>
   </div>
 
@@ -234,11 +231,12 @@ function renderFilters(){
   data.forEach(l=>l.tags.forEach(t=>set.add(t)));
 
   const c=document.getElementById('filters');
+  c.innerHTML='';
 
   set.forEach(tag=>{
     const el=document.createElement('div');
-    el.className='icon';
-    el.textContent=tag[0].toUpperCase();
+    el.className='filter-btn';
+    el.textContent=tag;
 
     el.onclick=()=>{
       if(activeTags.has(tag)){
@@ -275,19 +273,26 @@ function render(){
       <div class="name">${l.name}</div>
       <div class="tags">${l.tags.join(', ')}</div>
     `;
-    el.onclick=()=>open(l);
+    el.onclick=()=>openModal(l);
     g.appendChild(el);
   });
 }
 
-function open(l){
+function openModal(l){
   const m=document.getElementById('modal');
   const c=document.getElementById('modalContent');
 
   c.innerHTML=`
     <h2>${l.name}</h2>
     <p>${l.description}</p>
+
     <div>${l.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+
+    <h3>Ссылки</h3>
+    <div class="links">
+      ${l.links.map(link=>`<a href="${link.url}" target="_blank">${link.name}</a>`).join('')}
+    </div>
+
     ${l.images.map(i=>`<img src="${i}">`).join('')}
   `;
 
