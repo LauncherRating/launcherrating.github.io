@@ -62,8 +62,24 @@
     ]
   },
   {
-    "name": "Pandora Launcher",
+    "name": "AstralRinth",
     "order": 5,
+    "logo": "images/astral.png",
+    "description": "Лаунчер от Modrinth, сайта для модов, сборок, ресурспаков и т.д.",
+    "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://modrinth.com/app"},
+      {"name": "Github", "url":"https://github.com/modrinth/code"}
+    ],
+    "images": [
+      "images/astral1.png",
+      "images/astral2.png",
+      "images/astral3.png"
+    ]
+  },
+  {
+    "name": "Pandora Launcher",
+    "order": 6,
     "logo": "images/PandoraLauncher.png",
     "description": "Лаунчер от разработчиков Axiom и Flashback модов",
     "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
@@ -79,7 +95,7 @@
   },
   {
     "name": "Freesm Launcher",
-    "order": 6,
+    "order": 7,
     "logo": "images/freesm.png",
     "description": "Форк Prism с поддержкой Ely.by и других систем, улучшенным интерфейсом и другими фишками",
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -93,7 +109,7 @@
   },
   {
     "name": "PineconeMC (ElyPrismLauncher)",
-    "order": 7,
+    "order": 8,
     "logo": "images/elyprism.png",
     "description": "Форк Prism с поддержкой Ely.by",
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -107,7 +123,7 @@
   },
   {
     "name": "Prism Launcher (Cracked)",
-    "order": 8,
+    "order": 9,
     "logo": "images/prismcr.png",
     "description": "Форк Prism, добавляющий возможность играть без лицензии",
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -121,7 +137,7 @@
   },
   {
     "name": "ATLauncher",
-    "order": 9,
+    "order": 10,
     "logo": "images/atl.png",
     "description": "",
     "tags": ["Лицензионный", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -136,7 +152,7 @@
   },
   {
     "name": "Lexplosion",
-    "order": 10,
+    "order": 11,
     "logo": "images/lex.png",
     "description": "",
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -150,7 +166,7 @@
   },
   {
     "name": "PolyMC",
-    "order": 11,
+    "order": 12,
     "logo": "images/poly.png",
     "description": "Форк MultiMC",
     "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -165,7 +181,7 @@
   },
   {
     "name": "MultiMC",
-    "order": 12,
+    "order": 13,
     "logo": "images/multi.png",
     "description": "Лаунчер от Петра Мразека, одного из членов группы разработчиков майнкрафта",
     "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
@@ -179,7 +195,7 @@
   },
   {
     "name": "UltimMC",
-    "order": 13,
+    "order": 14,
     "logo": "images/ultim.png",
     "description": "Пиратский форк MultiMC",
     "tags": ["Пиратский", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
@@ -194,7 +210,7 @@
   },
   {
     "name": "Hello Minecraft! Launcher (HMCL)",
-    "order": 14,
+    "order": 15,
     "logo": "images/hmcl.png",
     "description": "",
     "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -210,7 +226,7 @@
   },
   {
     "name": "Legacy Launcher (TL Legacy, TLauncer)",
-    "order": 15,
+    "order": 16,
     "logo": "images/legacy.png",
     "description": "Оригинальный тлаунчер, сменил имя после кражи",
     "tags": ["Пиратский", "Открытый исходный код", "Хорошая репутация"],
