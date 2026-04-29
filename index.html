@@ -16,45 +16,37 @@
       overflow:hidden;
     }
 
-    /* Halo background */
+    /* Halo background (improved) */
     .halo {
       position:fixed;
-      width:700px;
-      height:700px;
+      width:600px;
+      height:600px;
       border-radius:50%;
-      filter: blur(80px);
-      opacity:0.65;
       z-index:-1;
-      animation: pulse 10s infinite ease-in-out, move 40s infinite linear;
+      opacity:0.8;
+      background: radial-gradient(circle at center, rgba(255,170,120,0.9) 0%, rgba(255,120,80,0.6) 40%, rgba(255,90,60,0.4) 70%, transparent 85%);
+      animation: float 30s ease-in-out infinite alternate, morph 12s ease-in-out infinite;
+      will-change: transform;
     }
 
-    .halo1 {
-      background: radial-gradient(circle, rgba(255,140,80,0.35), transparent 70%);
-      top:10%;
-      left:20%;
+    .halo1 { top:15%; left:25%; }
+    .halo2 { top:55%; left:65%; animation-delay: 3s; }
+    .halo3 { top:45%; left:10%; animation-delay: 6s; }
+
+    /* плавное движение */
+    @keyframes float {
+      0% { transform: translate3d(0,0,0); }
+      50% { transform: translate3d(30px,-30px,0); }
+      100% { transform: translate3d(0,0,0); }
     }
 
-    .halo2 {
-      background: radial-gradient(circle, rgba(255,200,120,0.3), transparent 70%);
-      top:60%;
-      left:60%;
-      animation-delay: 2s;
+    /* мягкая деформация круга */
+    @keyframes morph {
+      0%,100% { border-radius: 50% 50% 50% 50%; }
+      25% { border-radius: 55% 45% 50% 50%; }
+      50% { border-radius: 50% 60% 40% 50%; }
+      75% { border-radius: 45% 55% 55% 45%; }
     }
-
-    .halo3 {
-      background: radial-gradient(circle, rgba(255,120,100,0.25), transparent 70%);
-      top:40%;
-      left:10%;
-      animation-delay: 4s;
-    }
-
-    @keyframes pulse {
-      0%,100% { transform: scale(1); opacity:0.5; }
-      50% { transform: scale(1.2); opacity:0.8; }
-    }
-
-    @keyframes move {
-      0% { transform: translate(0,0); }
       50% { transform: translate(20px, -20px); }
       100% { transform: translate(0,0); }
     }
