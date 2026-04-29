@@ -164,8 +164,22 @@
     ]
   },
   {
-    "name": "Hello Minecraft! Launcher (HMCL)",
+    "name": "MultiMC",
     "order": 12,
+    "logo": "images/multi.png",
+    "description": "Лаунчер от Петра Мразека, одного из членов группы разработчиков майнкрафта",
+    "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://multimc.org/"},
+      {"name": "Github", "url":"https://github.com/MultiMC/Launcher"}
+    ],
+    "images": [
+      "images/multi1.png"
+    ]
+  },
+  {
+    "name": "Hello Minecraft! Launcher (HMCL)",
+    "order": 13,
     "logo": "images/hmcl.png",
     "description": "",
     "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
@@ -181,7 +195,7 @@
   },
   {
     "name": "Legacy Launcher (TL Legacy, TLauncer)",
-    "order": 13,
+    "order": 14,
     "logo": "images/legacy.png",
     "description": "Оригинальный тлаунчер, сменил имя после кражи",
     "tags": ["Пиратский", "Открытый исходный код", "Хорошая репутация"],
