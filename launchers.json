@@ -225,8 +225,23 @@
     ]
   },
   {
-    "name": "Legacy Launcher (TL Legacy, TLauncer)",
+    "name": "CurseForge App",
     "order": 16,
+    "logo": "images/curseforge.png",
+    "description": "Лаунчер от CurseForge, сайта для модов, сборок, ресурспаков и т.д.",
+    "tags": ["Лицензионный", "CurseForge", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://www.curseforge.com/download/app"}
+    ],
+    "images": [
+      "images/curse1.png",
+      "images/curse2.png",
+      "images/curse3.png"
+    ]
+  },
+  {
+    "name": "Legacy Launcher (TL Legacy, TLauncer)",
+    "order": 17,
     "logo": "images/legacy.png",
     "description": "Оригинальный тлаунчер, сменил имя после кражи",
     "tags": ["Пиратский", "Открытый исходный код", "Хорошая репутация"],
