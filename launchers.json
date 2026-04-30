@@ -18,7 +18,7 @@
     "name": "X Minecraft Launcher (XMCL)",
     "order": 2,
     "logo": "images/xmcl_logo.png",
-    "description": "Простой пример лаунчера",
+    "description": "Вдохновлён дизайном Steam",
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Сайт проекта", "url": "https://xmcl.app/"},
@@ -33,7 +33,7 @@
     "name": "Fluent Launcher",
     "order": 3,
     "logo": "images/fluent_logo.png",
-    "description": "Простой пример лаунчера",
+    "description": "Вдохновлён дизайном Windows 11",
     "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Сайт проекта", "url": "https://xcubestudio.net/fluent-launcher"},
@@ -81,7 +81,7 @@
     "name": "Pandora Launcher",
     "order": 6,
     "logo": "images/pandora.png",
-    "description": "Лаунчер от разработчиков Axiom и Flashback модов",
+    "description": "Лаунчер от разработчиков Axiom и Flashback модов. Как и остальные его проекты вдохновлён дизайном профессиональных программ для редактирования",
     "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Сайт проекта", "url": "https://pandora.moulberry.com/"},
@@ -183,7 +183,7 @@
     "name": "MultiMC",
     "order": 13,
     "logo": "images/multi.png",
-    "description": "Лаунчер от Петра Мразека, одного из членов группы разработчиков майнкрафта",
+    "description": "Лаунчер от Петра Мразека, одного из разработчиков майнкрафта",
     "tags": ["Лицензионный", "Modrinth", "Открытый исходный код", "Хорошая репутация"],
     "links": [
       {"name": "Сайт проекта", "url": "https://multimc.org/"},
