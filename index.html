@@ -57,7 +57,32 @@
       100% { transform:scale(1) rotate(0deg) skew(0deg); }
     }
 
-    /* ===== SIDEBAR ===== */
+    /* ===== GLOBAL SCROLLBAR ===== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2f3a #0b0d12;
+}
+
+*::-webkit-scrollbar {
+  width:10px;
+  height:10px;
+}
+
+*::-webkit-scrollbar-track {
+  background:#0b0d12;
+}
+
+*::-webkit-scrollbar-thumb {
+  background:#2a2f3a;
+  border-radius:10px;
+  border:2px solid #0b0d12;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background:#3a4150;
+}
+
+/* ===== SIDEBAR ===== */
     .sidebar{
       width:140px;
       background:#11141bcc;
