@@ -225,8 +225,37 @@
     ]
   },
   {
-    "name": "CurseForge App",
+    "name": "GDLauncher (Carbon)",
     "order": 16,
+    "logo": "images/gd.png",
+    "description": "",
+    "tags": ["Лицензионный", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://gdlauncher.com/"},
+      {"name": "Github", "url":"https://github.com/gorilla-devs/GDLauncher-Carbon"}
+    ],
+    "images": [
+      "images/gd1.png"
+    ]
+  },
+  {
+    "name": "GDLauncher (Cracked)",
+    "order": 17,
+    "logo": "images/gd.png",
+    "description": "",
+    "tags": ["Пиратский", "Modrinth", "CurseForge", "Открытый исходный код", "Хорошая репутация"],
+    "links": [
+      {"name": "Сайт проекта", "url": "https://gdevs.io/"},
+      {"name": "Github", "url":"https://github.com/HMCL-dev/HMCL"}
+    ],
+    "images": [
+      "images/gd1.png"
+    ]
+  },
+  
+  {
+    "name": "CurseForge App",
+    "order": 18,
     "logo": "images/curseforge.png",
     "description": "Лаунчер от CurseForge, сайта для модов, сборок, ресурспаков и т.д.",
     "tags": ["Лицензионный", "CurseForge", "Хорошая репутация"],
@@ -241,7 +270,7 @@
   },
   {
     "name": "Legacy Launcher (ранее TLauncer)",
-    "order": 17,
+    "order": 19,
     "logo": "images/legacy.png",
     "description": "Оригинальный тлаунчер, сменил имя после кражи",
     "tags": ["Пиратский", "Открытый исходный код", "Хорошая репутация"],
